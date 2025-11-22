@@ -4,10 +4,10 @@
 
 ## Решение задания 1
 2. Согласно .gitignore, сохранить личную, секретную информацию (логины,пароли,ключи,токены итд) допустимо в:
-**/.terraform/* - содержимом каталога .terraform в любом месте репозитория, например .terraform/somefile или somedirectory/.terraform/somefile
-.terraform* - в любом файл начинающийся с .terraform, кроме .terraformrc из-за пункта !.terraformrc
-*.tfstate - в любом файле с расширением .tfstate
-*.tfstate.* - в любом файлы с дополнительным расширением к .tfstate.
+- **/.terraform/* - содержимом каталога .terraform в любом месте репозитория, например .terraform/somefile или somedirectory/.terraform/somefile
+- .terraform* - в любом файл начинающийся с .terraform, кроме .terraformrc из-за пункта !.terraformrc
+- *.tfstate - в любом файле с расширением .tfstate
+- *.tfstate.* - в любом файлы с дополнительным расширением к .tfstate.
 Но поскольку все выше является служебными файлами самого terraform, наиболее реальный вариант - файл personal.auto.tfvars
 
 3. Содержимое ресурса **random_password**:
