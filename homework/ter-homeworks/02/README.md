@@ -73,3 +73,5 @@ var.test.dev1[0]
 
 Проверка доступа в интернет с ВМ:
 ![Проверка доступа в интернет](img/ping_ya.jpg)
+
+Ссылка на финальный код - https://github.com/cranberry511/devops_course/tree/main/homework/ter-homeworks/02/src
