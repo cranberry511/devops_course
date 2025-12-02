@@ -2,7 +2,7 @@ resource "yandex_compute_instance" "db" {
   for_each = { for vm in var.vm : vm.vm_name => vm }
   name        = each.key
   zone           = var.default_zone
-  platform_id = "standard-v3"
+  platform_id = var.platform_id
   resources {
     cores         = each.value.cpu
     memory        = each.value.ram
@@ -10,7 +10,7 @@ resource "yandex_compute_instance" "db" {
   }
   boot_disk {
     initialize_params {
-      image_id = "fd8qa5pcd0l7123dpvhc"
+      image_id = data.yandex_compute_image.my_image_family.id
       size = each.value.disk_volume
     }
   }

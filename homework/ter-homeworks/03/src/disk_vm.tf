@@ -8,15 +8,15 @@ resource "yandex_compute_disk" "my_disk" {
 resource "yandex_compute_instance" "my_storage" {
   name        = "storage"
   zone           = var.default_zone
-  platform_id = "standard-v3"
+  platform_id = var.platform_id
   resources {
-    cores         = 2
-    memory        = 1
-    core_fraction = 20
+    cores         = var.vm_cpu
+    memory        = var.vm_ram
+    core_fraction = var.vm_core_fraction
   }
   boot_disk {
     initialize_params {
-      image_id = "fd8qa5pcd0l7123dpvhc"
+      image_id = data.yandex_compute_image.my_image_family.id
     }
   }
   scheduling_policy {
@@ -24,9 +24,9 @@ resource "yandex_compute_instance" "my_storage" {
   }
 
   dynamic secondary_disk {
-    for_each = toset(["0", "1", "2"])
+   for_each = yandex_compute_disk.my_disk
     content {
-      disk_id     = yandex_compute_disk.my_disk[secondary_disk.key].id
+      disk_id     = yandex_compute_disk.my_disk[secondary_disk.key].id      
     }
   } 
   network_interface {

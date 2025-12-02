@@ -31,6 +31,36 @@ variable "vpc_name" {
   description = "VPC network&subnet name"
 }
 
+variable "platform_id" {
+  type        = string
+  default     = "standard-v3"
+}
+
+variable "os_family" {
+  type        = string
+  default     = "ubuntu-2404-lts"
+}
+
+variable "vm_cpu" {
+  type        = number
+  default     = 2
+}
+
+variable "vm_ram" {
+  type        = number
+  default     = 1
+}
+
+variable "vm_core_fraction" {
+  type        = number
+  default     = 20
+}
+
+variable "vm_web_count" {
+  type        = number
+  default     = 2
+}
+
 variable "vm" {
   type = list(object({  vm_name=string, cpu=number, ram=number, disk_volume=number, core_fraction=number }))
   default = [{

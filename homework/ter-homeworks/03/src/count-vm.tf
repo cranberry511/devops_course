@@ -4,18 +4,18 @@ data "yandex_vpc_security_group" "example" {
 
 resource "yandex_compute_instance" "web" {
   depends_on = [ yandex_compute_instance.db ]
-  count = 2
+  count = var.vm_web_count
   name        = "web-${count.index+1}"
   zone           = var.default_zone
-  platform_id = "standard-v3"
+  platform_id = var.platform_id
   resources {
-    cores         = 2
-    memory        = 1
-    core_fraction = 20
+    cores         = var.vm_cpu
+    memory        = var.vm_ram
+    core_fraction = var.vm_core_fraction
   }
   boot_disk {
     initialize_params {
-      image_id = "fd8qa5pcd0l7123dpvhc"
+      image_id = data.yandex_compute_image.my_image_family.id
     }
   }
   scheduling_policy {
