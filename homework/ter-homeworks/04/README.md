@@ -75,7 +75,7 @@ https://github.com/cranberry511/devops_course/blob/main/homework/ter-homeworks/0
 Вызов модуля по созданию базы данных и пользователя:
 ![Вызов модуля БД и пользователя](img/call_mysql_db_user.jpg)
 
-3. Создание кластера example из одном хосте:
+3. Создание кластера example из одного хоста:
 ![Вызов модуля БД 1](img/standalone_run.jpg)
 
 Результат создания БД test и пользователя app::
