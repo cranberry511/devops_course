@@ -78,7 +78,7 @@ https://github.com/cranberry511/devops_course/blob/main/homework/ter-homeworks/0
 3. Создание кластера example из одного хоста:
 ![Вызов модуля БД 1](img/standalone_run.jpg)
 
-Результат создания БД test и пользователя app::
+Результат создания БД test и пользователя app:
 ![Результат вызова модуля БД 1](img/standalone_result.jpg)
 ![Результат вызова модуля БД 2](img/standalone_result2.jpg)
 
