@@ -31,7 +31,7 @@ https://github.com/cranberry511/devops_course/blob/main/homework/ter-homeworks/0
 ```terraform state list```
 ![Список ресурсов](img/state_list.jpg)
 
-2-4. Список команд:
+2-4. Список команд:  
 ```terraform state rm module.vpc_dev.yandex_vpc_network.develop```  
 ```terraform state rm module.vpc_dev.yandex_vpc_subnet.develop```  
 ```terraform state rm module.analytics-vm.yandex_compute_instance.vm[0]```  
