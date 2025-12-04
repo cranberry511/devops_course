@@ -32,14 +32,14 @@ https://github.com/cranberry511/devops_course/blob/main/homework/ter-homeworks/0
 ![Список ресурсов](img/state_list.jpg)
 
 2-4. Список команд:
-terraform state rm module.vpc_dev.yandex_vpc_network.develop
-terraform state rm module.vpc_dev.yandex_vpc_subnet.develop
-terraform state rm module.analytics-vm.yandex_compute_instance.vm[0]
-terraform state rm module.marketing-vm.yandex_compute_instance.vm[0]
-terraform import  module.marketing-vm.yandex_compute_instance.vm[0] fhmrd3utk7vu92pfa8a3
-terraform import  module.analytics-vm.yandex_compute_instance.vm[0] fhmi5jen4f96ue9cmfmu
-terraform import module.vpc_dev.yandex_vpc_network.develop enpsgvmucertf5ef99nv
-terraform import module.vpc_dev.yandex_vpc_subnet.develop e9b28hvu0bogeg76qvql
+terraform state rm module.vpc_dev.yandex_vpc_network.develop  
+terraform state rm module.vpc_dev.yandex_vpc_subnet.develop  
+terraform state rm module.analytics-vm.yandex_compute_instance.vm[0]  
+terraform state rm module.marketing-vm.yandex_compute_instance.vm[0]  
+terraform import  module.marketing-vm.yandex_compute_instance.vm[0] fhmrd3utk7vu92pfa8a3  
+terraform import  module.analytics-vm.yandex_compute_instance.vm[0] fhmi5jen4f96ue9cmfmu  
+terraform import module.vpc_dev.yandex_vpc_network.develop enpsgvmucertf5ef99nv  
+terraform import module.vpc_dev.yandex_vpc_subnet.develop e9b28hvu0bogeg76qvql  
 
 Скриншоты шагов:
 ![Удаление ресурсов](img/state_rm.jpg)
